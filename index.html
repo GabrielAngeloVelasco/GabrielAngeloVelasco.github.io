@@ -3,134 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Angelo Velasco | Portfolio</title>
+    <title>Gabriel Angelo Velasco | Technical Portfolio</title>
+    
+    <!-- Google Fonts: Orbitron (Headers), Inter (Body), JetBrains Mono (Code/Tags) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- TOP HUD NAVIGATION -->
+    <nav class="hud-nav">
+        <div class="container nav-container">
+            <span class="nav-brand"><span class="pulse-dot"></span> G.A.V // PORTFOLIO</span>
+            <ul class="nav-links">
+                <li><a href="#skills" class="scramble-hover">01_COMPETENCIES</a></li>
+                <li><a href="#projects" class="scramble-hover">02_PROJECTS</a></li>
+                <li><a href="#contact" class="scramble-hover">03_CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
     <header id="hero" class="section hero-section">
         <div class="container">
-            <h1 class="glitch-text">Gabriel Angelo S. Velasco</h1>
-            <h2 class="subtitle">Computer Science Student | Game Developer | Security Enthusiast</h2>
-            <a href="#projects" class="cta-button">View My Projects</a>
+            <div class="sys-status">
+                [ AVAILABLE FOR INTERNSHIP (OJT) // 2026–2027 ]
+            </div>
+            <h1 class="glitch-text scramble-hover" data-text="GABRIEL ANGELO VELASCO">GABRIEL ANGELO VELASCO</h1>
+            <h2 class="subtitle">COMPUTER SCIENCE UNDERGRADUATE // GAME DEV // CYBERSECURITY</h2>
+            <p class="hero-bio">
+                4th-Year Computer Science student at the National College of Science and Technology. Actively learning and building hands-on projects in <strong>3D multiplayer game development</strong>, <strong>secure backend integration</strong>, and <strong>defensive network security labs</strong>.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="cyber-btn primary">[ CONTACT_ME ]</a>
+                <a href="resume.pdf" class="cyber-btn secondary" target="_blank">[ DOWNLOAD_RESUME_PDF ]</a>
+            </div>
         </div>
     </header>
 
-    <!-- ABOUT ME SECTION -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>
-                Hi, I'm Gabriel, a 4th-year Computer Science student at National College of Science and Technology (NCST) seeking an OJT opportunity. I am a versatile developer with a strong passion for 3D Game Development, Defensive Cybersecurity, and IoT Hardware Prototyping.
-            </p>
-            <p>
-                My technical journey involves building multiplayer experiences in Unity, designing low-poly 3D assets in Blender, and exploring network security through hands-on home labs like Wazuh SIEM and ESP8266 microcontrollers. Whether I am writing C# scripts for game mechanics or configuring sensors for hardware prototypes, I enjoy solving complex problems and building interactive, secure, and optimized systems.
-            </p>
-        </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
+    <!-- 2. SKILLS SECTION -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-header">
+                <span class="section-code">SECTION // 01</span>
+                <h2 class="section-title">TECHNICAL SKILLS &amp; TOOLS</h2>
+            </div>
+            
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>Python</li>
-                        <li>Arduino C/C++</li>
-                    </ul>
+                <div class="skill-module">
+                    <div class="module-corner">CORE_01</div>
+                    <h3>&gt; LANGUAGES &amp; TOOLS</h3>
+                    <div class="tech-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">C / C++ (Arduino)</span>
+                        <span class="tag">Git &amp; GitHub</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Game Dev & Art</h3>
-                    <ul>
-                        <li>Unity 6.3 LTS (URP, Shader Graph)</li>
-                        <li>Unreal Engine</li>
-                        <li>Blender (Low-Poly Modeling)</li>
-                        <li>Photon PUN2 & PlayFab</li>
-                    </ul>
+                <div class="skill-module">
+                    <div class="module-corner">CORE_02</div>
+                    <h3>&gt; GAME &amp; 3D DEVELOPMENT</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Unity 6.3 LTS (URP)</span>
+                        <span class="tag">Photon PUN 2</span>
+                        <span class="tag">PlayFab Backend</span>
+                        <span class="tag">Shader Graph</span>
+                        <span class="tag">Blender 3D</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Security & Hardware</h3>
-                    <ul>
-                        <li>ESP8266 NodeMCU V2 (Security Testing)</li>
-                        <li>IoT Sensors & Microcontrollers</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>Git & GitHub Desktop</li>
-                        <li>VS Code</li>
-                        <li>PlatformIO</li>
-                    </ul>
+                <div class="skill-module">
+                    <div class="module-corner">CORE_03</div>
+                    <h3>&gt; CYBERSECURITY &amp; HARDWARE</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Wazuh SIEM</span>
+                        <span class="tag">ESP8266 NodeMCU</span>
+                        <span class="tag">802.11 Network Auditing</span>
+                        <span class="tag">PlatformIO</span>
+                        <span class="tag">Embedded IoT Sensors</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- 3. PROJECTS SECTION -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-code">SECTION // 02</span>
+                <h2 class="section-title">HANDS-ON PROJECTS</h2>
+            </div>
 
-            <!-- Project 1: StoneForge -->
-            <article class="project-card">
-                <div class="project-info">
-                    <h3>StoneForge (Thesis)</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> Unity 6.3 LTS, C#, Blender, Photon PUN2, PlayFab</p>
-                    <p>
-                        A 3D low-poly cooperative educational online game built from the ground up.
-                         I engineered core mechanics including character locomotion, custom tool interactions, and multiplayer combat.
-                          I also integrated PlayFab with custom Node.js endpoints for backend authentication and collaborated using GitHub for version control.
-                    </p>
-                    <a href="https://github.com/GabrielAngeloVelasco/NewStoneForge" class="repo-link" target="_blank">View GitHub Repo</a>
-                </div>
-                <div class="project-image">
-                    <img src="stoneforge-gameplay.jpg" alt="StoneForge Gameplay Screenshot">
-                </div>
-            </article>
+            <div class="shards-wrapper">
+                <!-- Project 1: StoneForge -->
+                <article class="data-shard">
+                    <div class="shard-meta">
+                        <span class="shard-id">PROJECT_01 // CAPSTONE THESIS</span>
+                        <span class="shard-status active">● COMPLETED &amp; DEFENDED</span>
+                    </div>
+                    <div class="shard-info">
+                        <h3>StoneForge: 3D Cooperative Educational Online Game</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Unity 6.3 URP</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Photon PUN 2</span>
+                            <span class="tag">PlayFab</span>
+                            <span class="tag">Blender</span>
+                        </div>
+                        <p class="shard-desc">
+                            Developed a 3D low-poly multiplayer adventure game featuring cooperative mechanics, custom character locomotion, and flat-shaded visual pipelines. Integrated Microsoft PlayFab cloud services to manage user authentication, account registration, and recovery workflows.
+                        </p>
+                        <div class="shard-actions">
+                            <a href="https://stoneforgegame.vercel.app/" class="cyber-btn inline-btn" target="_blank">VIEW_GAME_WEBSITE &rarr;</a>
+                            <a href="https://github.com/GabrielAngeloVelasco/NewStoneForge" class="cyber-btn inline-btn" target="_blank">VIEW_SOURCE_CODE &rarr;</a>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Project 2: Smart Drainage -->
-            <article class="project-card">
-                <div class="project-info">
-                    <h3>Defensive Security & Wi-Fi Testing Labs</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> ESP8266 NodeMCU, Wazuh SIEM, VS Code (PlatformIO)</p>
-                    <p>
-                        Set up a local cybersecurity home lab environment including a bare-metal deployment of Wazuh SIEM for defensive monitoring, alongside an air-gapped ESP8266 Wi-Fi deauthenticator project using SpacehuhnTech firmware to study network vulnerabilities and defensive configurations.
-                    </p>
-                </div>
-                <div class="project-image">
-                    <img src="cyber-lab.jpg" alt="ESP8266 Security Lab Setup">
-                </div>
-            </article> 
-
-            <!-- Project 3: Cyber Lab -->
-            <article class="project-card">
-                <div class="project-info">
-                  
-                </div>
-                <div class="project-image">
-                    <img src="" alt="">
-                </div>
-            </article>
-
+                <!-- Project 2: ESP8266 Security Lab -->
+                <article class="data-shard">
+                    <div class="shard-meta">
+                        <span class="shard-id">PROJECT_02 // NETWORK SECURITY LAB</span>
+                        <span class="shard-status classified">▲ DEFENSIVE SECURITY RESEARCH</span>
+                    </div>
+                    <div class="shard-info">
+                        <h3>802.11 Wireless Vulnerability &amp; SIEM Monitoring Lab</h3>
+                        <div class="tech-tags">
+                            <span class="tag">ESP8266 (CP2102)</span>
+                            <span class="tag">Wazuh SIEM</span>
+                            <span class="tag">PlatformIO</span>
+                            <span class="tag">Wireless Auditing</span>
+                        </div>
+                        <p class="shard-desc">
+                            Configured an air-gapped wireless security lab using an ESP8266 NodeMCU V2 microcontroller to learn about 802.11 management frame vulnerabilities (deauthentication attacks) on controlled access points. Explored Wazuh SIEM monitoring to analyze wireless intrusion indicators and log events.
+                        </p>
+                    </div>
+                </article>
+                
+            </div>
         </div>
     </section>
 
-    <!-- 5. CONTACT SECTION -->
-    <footer id="contact" class="section footer-section">
+    <!-- 4. CONTACT SECTION -->
+    <footer id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p>I am currently looking for an OJT position. Feel free to reach out!</p>
-            <div class="contact-links">
-                <a href="velasco.gabriel.angelo.057@gmail.com" class="contact-btn">Email Me</a>
-                <a href="https://github.com/GabrielAngeloVelasco" class="contact-btn" target="_blank">GitHub Profile</a>
-                <a href="resume.pdf" class="contact-btn download-btn" target="_blank">Download Resume</a>
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span>SECTION // 03 — CONTACT INFORMATION</span>
+                    <span>[ CAVITE / METRO MANILA, PH ]</span>
+                </div>
+                <div class="terminal-body">
+                    <h2>READY TO LEARN &amp; CONTRIBUTE</h2>
+                    <p>Open for OJT and internship opportunities in Cybersecurity (SOC / Network Defense), Software Engineering, and Game Development to further develop my skills.</p>
+                    <div class="contact-links">
+                        <a href="https://github.com/GabrielAngeloVelasco" target="_blank" class="cyber-btn secondary">[ GITHUB_PROFILE ]</a>
+                        <a href="https://www.linkedin.com/in/gabriel-angelo-velasco-82aa7444b" target="_blank" class="cyber-btn secondary">[ LINKEDIN_PROFILE ]</a>
+                        <a href="velasco.gabriel.angelo.057@gmail.com" class="cyber-btn secondary">[ SEND_EMAIL ]</a>
+                       <a href="https://www.facebook.com/lts.Vagabond" target="_blank" class="cyber-btn secondary">[ FACEBOOK_PROFILE ]</a> 
+                    </div>
+                </div>
             </div>
-            <p class="copyright">© 2026 Gabriel Velasco.</p>
+            <p class="copyright">&copy; 2026 GABRIEL ANGELO VELASCO // ALL RIGHTS RESERVED</p>
         </div>
     </footer>
 

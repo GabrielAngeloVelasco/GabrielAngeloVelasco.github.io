@@ -1,21 +1,52 @@
-console.log("%c[SYSTEM INITIALIZED] Connection established.", "color: #00ffcc; font-size: 14px; font-family: monospace; font-weight: bold;");
-console.log("%cHello! I'm Gabriel. If you're reading this, you probably inspect code like I do. Let's build something awesome!", "color: #e0e0e0; font-size: 12px; font-family: monospace;");
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Cyberpunk Text Scramble Effect on Hover
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
 
-// Smooth Scrolling para sa mga In-Page Links (tulad ng 'View My Projects' button)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        // Pinipigilan nito ang default na biglaang pagtalon ng webpage
-        e.preventDefault(); 
-        
-        // Kinukuha ang id ng section na pupuntahan (hal. #projects)
-        const targetElement = document.querySelector(this.getAttribute('href'));
-        
-        // Inuutusan ang browser na mag-scroll nang banayad papunta sa target section
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    document.querySelectorAll(".scramble-hover").forEach((el) => {
+        el.dataset.original = el.innerText;
+
+        el.addEventListener("mouseenter", (event) => {
+            let iteration = 0;
+            const target = event.target;
+            const originalText = target.dataset.original;
+
+            clearInterval(target.scrambleInterval);
+
+            target.scrambleInterval = setInterval(() => {
+                target.innerText = originalText
+                    .split("")
+                    .map((char, index) => {
+                        if (char === " ") return " ";
+                        if (index < iteration) return originalText[index];
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join("");
+
+                if (iteration >= originalText.length) {
+                    clearInterval(target.scrambleInterval);
+                }
+                iteration += 1 / 2;
+            }, 25);
+        });
+    });
+
+    // 2. Smooth Card Reveal on Scroll
+    const cards = document.querySelectorAll(".skill-module, .data-shard, .terminal-box");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(16px)";
+        card.style.transition = "opacity 0.45s ease, transform 0.45s ease";
+        observer.observe(card);
     });
 });
