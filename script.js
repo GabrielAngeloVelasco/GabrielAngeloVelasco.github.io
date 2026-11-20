@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Cyberpunk Text Scramble Effect on Hover
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
 
     document.querySelectorAll(".scramble-hover").forEach((el) => {
         el.dataset.original = el.innerText;
